@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+
+</head>
+<body>
+  
+    <div class="container py-4 mx-auto w-75">
+        <div class="row">
+            <div>
+             <label for="productName">productName:</label>  
+             <input onkeyup="validationName()" class="form-control my-2" type="text" id="productName"> 
+             <div id="nameAlert" class="alert alert-danger d-none my-1"> Name Should Starts With  Capital Letter && Can't Be Less Than 3 Letters!! </div>
+
+             <label for="productPrice">productPrice:</label>  
+             <input class="form-control my-2" type="number" id="productPrice"> 
+
+             <label for="producCategory">productCategory</label>  
+             <input class="form-control my-2" type="text" id="producCategory">
+             
+             <label for="productDesc">productDesc:</label>
+             <textarea type="text" class="form-control h-25" id="productDesc"></textarea>
+             
+             <button disabled onclick="addProduct()" id="mainBtn" class="btn  btn-info text-white fs-4 mt-2 m w-100">Add Product</button>
+            </div>
+            <div class="w-75 mx-auto mt-5 py-4">
+                <label for="searchInp">search...</label>
+                <input onkeyup="searchedProducts(this.value)" class="form-control" type="search" id="searchInp">
+            </div>
+
+            <div class="info text-center">
+                <h3>Product Info</h3>
+            </div>
+            <table class="table">
+                <thead >
+                    <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                   
+                      </tr>
+                </thead>
+                <tbody id="Rows">
+        
+                </tbody>
+              </table>
+            
+        </div>
+    </div>
+
+
+
+
+
+    
+    <script src="JS/main.js"></script>
+</body>
+</html>
